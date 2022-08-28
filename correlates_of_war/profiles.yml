@@ -1,0 +1,7 @@
+cow_duckdb:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: '../cow.db'
+      threads: 4 

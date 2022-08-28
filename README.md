@@ -21,3 +21,8 @@ correlates_of_war # Enter name of project
 1 # select duckdb as database
 ```
 
+Create `profiles.yml` in dbt project root and specify path to cow.db.
+
+## DuckDB setup
+
+Copied CSV files into `duckdb/data/` and ran the script `duckdb/create_db.py`
