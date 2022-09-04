@@ -1,6 +1,4 @@
-/*
- staging.states2016
- */
+-- staging.states2016
 
 {{ config(MATERIALIZED = 'table') }}
 
@@ -17,7 +15,7 @@ renamed AS (
 			statenme AS state_name,
 			make_date(styear::INTEGER, stmonth::INTEGER, stday::INTEGER) AS start_date,
 			make_date(endyear::INTEGER, endmonth::INTEGER, endday::INTEGER) AS end_date
-		FROM sources.states2016
+		FROM source
 		)
 
 SELECT *

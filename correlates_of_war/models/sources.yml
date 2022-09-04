@@ -2,14 +2,300 @@ version: 2
 
 sources:
   - name: sources
-    description: all CSV files from correlatesofwar.org loaded in via duckdb
-    schema: sources
+    description: ""
     tables:
+
       - name: states2016
+        description: ""
         columns:
-          - name: 
+          - name: stateabb
+            description: ""
+          - name: ccode
+            description: ""
+          - name: statenme
+            description: ""
+          - name: styear
+            description: ""
+          - name: stmonth
+            description: ""
+          - name: stday
+            description: ""
+          - name: endyear
+            description: ""
+          - name: endmonth
+            description: ""
+          - name: endday
+            description: ""
+          - name: version
+            description: ""
+
       - name: system2016
-      - name: interstatewar_v40
-      - name: intrastatewar_v51
+        description: ""
+        columns:
+          - name: stateabb
+            description: ""
+          - name: ccode
+            description: ""
+          - name: year
+            description: ""
+          - name: version
+            description: ""
+            
       - name: extrastatewar_v40
+        description: ""
+        columns:
+          - name: warnum
+            description: ""
+          - name: warname
+            description: ""
+          - name: wartype
+            description: ""
+          - name: ccode1
+            description: ""
+          - name: sidea
+            description: ""
+          - name: ccode2
+            description: ""
+          - name: sideb
+            description: ""
+          - name: startmonth1
+            description: ""
+          - name: startday1
+            description: ""
+          - name: startyear1
+            description: ""
+          - name: endmonth1
+            description: ""
+          - name: endday1
+            description: ""
+          - name: endyear1
+            description: ""
+          - name: startmonth2
+            description: ""
+          - name: startday2
+            description: ""
+          - name: startyear2
+            description: ""
+          - name: endmonth2
+            description: ""
+          - name: endday2
+            description: ""
+          - name: endyear2
+            description: ""
+          - name: initiator
+            description: ""
+          - name: interven
+            description: ""
+          - name: transfrom
+            description: ""
+          - name: outcome
+            description: ""
+          - name: transto
+            description: ""
+          - name: wherefought
+            description: ""
+          - name: batdeath
+            description: ""
+          - name: nonstatedeaths
+            description: ""
+          - name: version
+            description: ""
+
+      - name: interstatewar_v40
+        description: ""
+        columns:
+          - name: warnum
+            description: ""
+          - name: warname
+            description: ""
+          - name: wartype
+            description: ""
+          - name: ccode
+            description: ""
+          - name: statename
+            description: ""
+          - name: side
+            description: ""
+          - name: startmonth1
+            description: ""
+          - name: startday1
+            description: ""
+          - name: startyear1
+            description: ""
+          - name: endmonth1
+            description: ""
+          - name: endday1
+            description: ""
+          - name: endyear1
+            description: ""
+          - name: startmonth2
+            description: ""
+          - name: startday2
+            description: ""
+          - name: startyear2
+            description: ""
+          - name: endmonth2
+            description: ""
+          - name: endday2
+            description: ""
+          - name: endyear2
+            description: ""
+          - name: transfrom
+            description: ""
+          - name: wherefought
+            description: ""
+          - name: initiator
+            description: ""
+          - name: outcome
+            description: ""
+          - name: transto
+            description: ""
+          - name: batdeath
+            description: ""
+          - name: version
+            description: ""
+
+      - name: intrastatewar_v51
+        description: ""
+        columns:
+          - name: warnum
+            description: ""
+          - name: warname
+            description: ""
+          - name: v5regionnum
+            description: ""
+          - name: wartype
+            description: ""
+          - name: ccodea
+            description: ""
+          - name: sidea
+            description: ""
+          - name: sideb
+            description: ""
+          - name: intnl
+            description: ""
+          - name: startmo1
+            description: ""
+          - name: startdy1
+            description: ""
+          - name: startyr1
+            description: ""
+          - name: endmo1
+            description: ""
+          - name: enddy1
+            description: ""
+          - name: endyr1
+            description: ""
+          - name: startmo2
+            description: ""
+          - name: startdy2
+            description: ""
+          - name: startyr2
+            description: ""
+          - name: endmo2
+            description: ""
+          - name: enddy2
+            description: ""
+          - name: endyr2
+            description: ""
+          - name: startmo3
+            description: ""
+          - name: startdy3
+            description: ""
+          - name: startyr3
+            description: ""
+          - name: endmo3
+            description: ""
+          - name: enddy3
+            description: ""
+          - name: endyr3
+            description: ""
+          - name: startmo4
+            description: ""
+          - name: startdy4
+            description: ""
+          - name: startyr4
+            description: ""
+          - name: endmo4
+            description: ""
+          - name: enddy4
+            description: ""
+          - name: endyr4
+            description: ""
+          - name: wduratdays
+            description: ""
+          - name: wduratmo
+            description: ""
+          - name: totnatmonwar
+            description: ""
+          - name: transfrom
+            description: ""
+          - name: initiator
+            description: ""
+          - name: outcome
+            description: ""
+          - name: transto
+            description: ""
+          - name: deathssidea
+            description: ""
+          - name: deathssideb
+            description: ""
+          - name: totalbdeaths
+            description: ""
+          - name: version
+            description: ""
+
       - name: nonstatewar_v40
+        description: ""
+        columns:
+          - name: warnum
+            description: ""
+          - name: warname
+            description: ""
+          - name: wartype
+            description: ""
+          - name: wherefought
+            description: ""
+          - name: sidea1
+            description: ""
+          - name: sidea2
+            description: ""
+          - name: sideb1
+            description: ""
+          - name: sideb2
+            description: ""
+          - name: sideb3
+            description: ""
+          - name: sideb4
+            description: ""
+          - name: sideb5
+            description: ""
+          - name: startyear
+            description: ""
+          - name: startmonth
+            description: ""
+          - name: startday
+            description: ""
+          - name: endyear
+            description: ""
+          - name: endmonth
+            description: ""
+          - name: endday
+            description: ""
+          - name: initiator
+            description: ""
+          - name: transfrom
+            description: ""
+          - name: transto
+            description: ""
+          - name: outcome
+            description: ""
+          - name: sideadeaths
+            description: ""
+          - name: sidebdeaths
+            description: ""
+          - name: totalcombatdeaths
+            description: ""
+          - name: version
+            description: ""
+

@@ -41,6 +41,8 @@ Create `sources.yml` in models folder, generated using codegen CLI command:
 dbt run-operation generate_source --args '{"schema_name": "sources", "generate_columns": True, "include_descriptions": True}'
 ```
 
+Create custom macro `generate_schema_name.sql` so that schema names don't have a prefix (as documented here: https://docs.getdbt.com/docs/building-a-dbt-project/building-models/using-custom-schemas)
+
 ### DuckDB setup
 
 Copied CSV files into `duckdb/data/` and ran the script `duckdb/create_db.py`

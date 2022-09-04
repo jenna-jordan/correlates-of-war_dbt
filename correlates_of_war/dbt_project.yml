@@ -34,5 +34,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   correlates_of_war:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    staging:
       +materialized: table
+      +schema: staging
+    normalized:
+      +materialized: table
+      +schema: normalized
