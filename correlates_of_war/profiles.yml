@@ -4,4 +4,4 @@ cow_duckdb:
     dev:
       type: duckdb
       path: '../cow.db'
-      threads: 4 
+      threads: 1

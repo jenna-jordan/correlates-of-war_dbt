@@ -1,0 +1,7 @@
+[sqlfluff]
+templater = dbt
+
+[sqlfluff:templater:dbt]
+project_dir = ./correlates_of_war
+profiles_dir = ./correlates_of_war/profiles.yml
+profile = cow_duckdb

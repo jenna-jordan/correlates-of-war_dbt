@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: sources
+    description: all CSV files from correlatesofwar.org loaded in via duckdb
+    schema: sources
+    tables:
+      - name: states2016
+        columns:
+          - name: 
+      - name: system2016
+      - name: interstatewar_v40
+      - name: intrastatewar_v51
+      - name: extrastatewar_v40
+      - name: nonstatewar_v40
