@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: states2016
+    description: "This table contains a list of the COW states, numbers, abbreviations, and their qualifying periods of tenure in the state system. Users of the data set should note that states that leave and reenter the state system have more than one record in the data set."
+    columns:
+      - name: state_abbr
+        description: "COW state abbreviation"
+
+      - name: country_code
+        description: "COW state number"
+
+      - name: state_name
+        description: "Primary COW state name"
+
+      - name: start_date
+        description: "Beginning date of state tenure"
+
+      - name: end_date
+        description: "Ending date of state tenure"
+
+  - name: system2016
+    description: "This table contains a year-by-year list of state system membership (and so, is a base country-year data set). A state is listed as being a member of the state system if it is recorded in states2016 as present in the system at any time during the relevant year."
+    columns:
+      - name: state_abbr
+        description: "COW state abbreviation"
+
+      - name: country_code
+        description: "COW state number"
+
+      - name: year
+        description: "Observation year"
+
+  - name: majors2016
+    description: "This table contains a list of the COW major powers and their qualifying periods of tenure. Users of the data set should note that major powers that leave and reenter the major power system have more than one record in the data set."
+    columns:
+      - name: state_abbr
+        description: "COW state abbreviation"
+
+      - name: country_code
+        description: "COW state number"
+
+      - name: start_date
+        description: "Beginning date of major power tenure"
+
+      - name: end_date
+        description: "Ending date of major power tenure"

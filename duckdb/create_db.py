@@ -23,6 +23,8 @@ CREATE TABLE sources.states2016 AS
     SELECT * FROM read_csv_auto('./duckdb/data/states2016.csv', ALL_VARCHAR=TRUE);
 CREATE TABLE sources.system2016 AS 
     SELECT * FROM read_csv_auto('./duckdb/data/system2016.csv', ALL_VARCHAR=TRUE);
+CREATE TABLE sources.majors2016 AS 
+    SELECT * FROM read_csv_auto('./duckdb/data/majors2016.csv', ALL_VARCHAR=TRUE);
 CREATE TABLE sources.interstatewar_v40 AS 
     SELECT * FROM read_csv_auto('./duckdb/data/Inter-StateWarData_v4.0.csv', ALL_VARCHAR=TRUE);
 CREATE TABLE sources.nonstatewar_v40 AS 

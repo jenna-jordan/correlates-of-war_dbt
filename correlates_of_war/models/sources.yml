@@ -2,300 +2,322 @@ version: 2
 
 sources:
   - name: sources
-    description: ""
+    description: "All CSV files are loaded into the sources schema, with all columns of type VARCHAR"
     tables:
 
       - name: states2016
-        description: ""
+        description: "This file contains a list of the COW states, numbers, abbreviations, and their qualifying periods of tenure in the state system. Users of the data set should note that states that leave and reenter the state system have more than one record in the data set."
         columns:
           - name: stateabb
-            description: ""
+            description: "COW state abbreviation"
           - name: ccode
-            description: ""
+            description: "COW state number"
           - name: statenme
-            description: ""
+            description: "Primary COW state name"
           - name: styear
-            description: ""
+            description: "Beginning year of state tenure"
           - name: stmonth
-            description: ""
+            description: "Beginning month of state"
           - name: stday
-            description: ""
+            description: "Beginning day of state tenure"
           - name: endyear
-            description: ""
+            description: "Ending year of state tenure"
           - name: endmonth
-            description: ""
+            description: "Ending month of state tenure"
           - name: endday
-            description: ""
+            description: "Ending day of state tenure"
           - name: version
-            description: ""
+            description: "Data file version number"
 
       - name: system2016
-        description: ""
+        description: "This file contains a year-by-year list of state system membership (and so, is a base country-year data set). A state is listed as being a member of the state system if it is recorded in states.csv as present in the system at any time during the relevant year."
         columns:
           - name: stateabb
-            description: ""
+            description: "COW state abbreviation"
           - name: ccode
-            description: ""
+            description: "COW state number"
           - name: year
-            description: ""
+            description: "Observation year"
           - name: version
-            description: ""
-            
+            description: "Data file version number"
+      
+      - name: majors2016
+        description: "This file contains a list of the COW major powers and their qualifying periods of tenure. Users of the data set should note that major powers that leave and reenter the major power system have more than one record in the data set."
+        columns:
+          - name: stateabb
+            description: "COW state abbreviation"
+          - name: ccode
+            description: "COW state number"
+          - name: styear
+            description: "Beginning year of major power tenure"
+          - name: stmonth
+            description: "Beginning month of major power tenure"
+          - name: stday
+            description: "Beginning day of major power tenure"
+          - name: endyear
+            description: "Ending year of major power tenure"
+          - name: endmonth
+            description: "Ending month of major power tenure"
+          - name: endday
+            description: "Ending day of major power tenure"
+          - name: version
+            description: "Data file version number"
+
       - name: extrastatewar_v40
-        description: ""
+        description: "The Correlates of War (COW) Project has utilized a classification of wars that is based upon the status of territorial entities, in particular focusing on those that are classified as members of the inter-state system (referred to as “states”). Wars have been categorized by whether they primarily take place between/among states, between/among a state(s) and a nonstate entity, and within states. This dataset encompasses wars in the middle category – wars that take place between a state(s) and a nonstate entity outside the borders of the state... An extra-state war involves fighting by a state system member outside its borders against the armed forces of an entity that is not a member of the interstate system. Within the current COW war typology, an extra-state war must meet same definitional requirements of all wars in that the war must involve sustained combat, involving organized armed forces, resulting in a minimum of 1,000 battle-related combatant fatalities within a twelve month period."
         columns:
           - name: warnum
-            description: ""
+            description: "the number assigned to the war"
           - name: warname
-            description: ""
+            description: "the name given to the war"
           - name: wartype
-            description: ""
+            description: "2= Colonial War; 3= Imperial War"
           - name: ccode1
-            description: ""
+            description: "the System Membership number (or Country Code) for the participant on Side A of the war; -8 = Not Applicable (the participant is not a state) or there is no additional state on Side A"
           - name: sidea
-            description: ""
+            description: "the name of the participant on Side A of the war: -8=Not Applicable (no additional party on this side)"
           - name: ccode2
-            description: ""
+            description: "the System Membership number (or Country Code) for the participant on Side B of the war; -8 = Not Applicable (the participant is not a state) or there is no additional state on Side B"
           - name: sideb
-            description: ""
+            description: "the name of the participant(s) (state or nonstate) fighting on the other side of the war (Side B): -8=Not Applicable (no additional party on this side)"
           - name: startmonth1
-            description: ""
+            description: "the month in which sustained combat began: -9 = month unknown"
           - name: startday1
-            description: ""
+            description: "the day on which sustained combat began: -9 = day unknown"
           - name: startyear1
-            description: ""
+            description: "the year in which sustained combat began: -9 = year is unknown"
           - name: endmonth1
-            description: ""
+            description: "the month in which sustained combat ended, or the month of the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2007, -9 = month unknown"
           - name: endday1
-            description: ""
+            description: "the day on which sustained combat ended, or the day after the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2007, -9 = day unknown"
           - name: endyear1
-            description: ""
+            description: "the year in which sustained combat ended, or the year of the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2007, -9 = year unknown"
           - name: startmonth2
-            description: ""
+            description: "after a break in the fighting, the month in which sustained combat resumes: -8= not applicable (no break in the fighting), -9 = month unknown"
           - name: startday2
-            description: ""
+            description: "after a break in the fighting, the day on which sustained combat resumes: -8= not applicable (no break in the fighting), -9 = month unknown"
           - name: startyear2
-            description: ""
+            description: "after a break in the fighting, the year in which sustained combat resumes: -8= not applicable (no break in the fighting), -9 = year unknown"
           - name: endmonth2
-            description: ""
+            description: "after fighting resumes, the month in which sustained combat ended, or the month of the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2007, -8= not applicable (no break in the fighting), -9 = month unknown"
           - name: endday2
-            description: ""
+            description: "after fighting resumes, the day on which sustained combat ended, or the day after the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2007, -8= not applicable (no break in the fighting), -9 = day unknown"
           - name: endyear2
-            description: ""
+            description: "after fighting resumes, the year in which sustained combat ended, or the year of the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2007, -8= not applicable (no break in the fighting), -9 = year unknown"
           - name: initiator
-            description: ""
+            description: "Did the participant on Side A initiate the war? 0=no, 1=yes"
           - name: interven
-            description: ""
+            description: "was there an additional state that intervened in the war? 0=no, 1=yes"
           - name: transfrom
-            description: ""
+            description: "the War# of a preceding war that was transformed into this extra-state war: -8 = Not applicable"
           - name: outcome
-            description: ""
+            description: "coded as: 1 – Side A wins, 2 - Side B wins, 3 - Compromise, 4 - The war was transformed into another type of war, 5 - The war is ongoing as of 12/31/2007, 6 - Stalemate, 7 - Conflict continues at below war level"
           - name: transto
-            description: ""
+            description: "the War# of the war that this war transformed into, -8=Not applicable"
           - name: wherefought
-            description: ""
+            description: "Region where combat occurred. Values are: 1 = W. Hemisphere, 2 = Europe, 4 = Africa, 6 = Middle East, 7 = Asia, 9 = Oceania"
           - name: batdeath
-            description: ""
+            description: "the battle-related combatant fatalities suffered by the state participant: -9= data unknown"
           - name: nonstatedeaths
-            description: ""
+            description: "the battle-related combatant fatalities suffered by the nonstate participant: -8 = not applicable (deaths reported only in the record for the initial state participant, not in the record for the intervening state(s), -9= data unknown"
           - name: version
-            description: ""
+            description: "Version of the data = 4.0"
 
       - name: interstatewar_v40
-        description: ""
+        description: "The Correlates of War (COW) Project has utilized a classification of wars that is based upon the status of territorial entities, in particular focusing on those that are classified as members of the inter-state system (referred to as “states”). Wars have been categorized by whether they primarily take place between/among states, between/among a state(s) and a non-state entity, and within states. This dataset encompasses wars in the first category (WarType #1)– wars that take place between or among states (members of the interstate system)... Within the COW war typology, an inter-state war must meet same definitional requirements of all wars in that the war must involve sustained combat, involving organized armed forces, resulting in a minimum of 1,000 battle-related combatant fatalities within a twelve month period."
         columns:
           - name: warnum
-            description: ""
+            description: "the number assigned to the war"
           - name: warname
-            description: ""
+            description: "the name given to the war"
           - name: wartype
-            description: ""
+            description: "1 = Inter-state war"
           - name: ccode
-            description: ""
+            description: "the System Membership number (or Country Code) for the state participant"
           - name: statename
-            description: ""
+            description: "the name of the System Member"
           - name: side
             description: ""
           - name: startmonth1
-            description: ""
+            description: "the month in which sustained combat began: -9 = month unknown"
           - name: startday1
-            description: ""
+            description: "the day on which sustained combat began: -9 = day unknown"
           - name: startyear1
-            description: ""
+            description: "the year in which sustained combat began: -9 = year is unknown"
           - name: endmonth1
-            description: ""
+            description: "the month in which sustained combat ended, or the month of the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2007, -9 = month unknown"
           - name: endday1
-            description: ""
+            description: "the day on which sustained combat ended, or the day after the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2007, -9 = day unknown"
           - name: endyear1
-            description: ""
+            description: "the year in which sustained combat ended, or the year of the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2007, -9 = year unknown"
           - name: startmonth2
-            description: ""
+            description: "after a break in the fighting, the month in which sustained combat resumes: -9 = month unknown, -8 = not applicable"
           - name: startday2
-            description: ""
+            description: "after a break in the fighting, the day on which sustained combat resumes: -9 = month unknown, -8 = not applicable"
           - name: startyear2
-            description: ""
+            description: "after a break in the fighting, the year in which sustained combat resumes: -9 = year unknown, -8 = not applicable"
           - name: endmonth2
-            description: ""
+            description: "after fighting resumes, the month in which sustained combat ended, or the month of the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2007, -9 = month unknown, -8 = not applicable"
           - name: endday2
-            description: ""
+            description: "after fighting resumes, the day on which sustained combat ended, or the day after the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2007, -9 = day unknown, -8 = not applicable"
           - name: endyear2
-            description: ""
+            description: "after fighting resumes, the year in which sustained combat ended, or the year of the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2007, -9 = year unknown, -8 = not applicable"
           - name: transfrom
-            description: ""
+            description: "the War# of a preceding war that was transformed into this inter-state war: - 8 = Not applicable"
           - name: wherefought
-            description: ""
+            description: "Region(s) where combat involving the state occurred. Values are: 1 = W. Hemisphere, 2 = Europe, 4 = Africa, 6 = Middle East, 7 = Asia, 9 = Oceania, 11 = Europe & Middle East, 12 = Europe & Asia, 13 = W. Hemisphere & Asia, 14 = Europe, Africa & Middle East, 15 = Europe, Africa, Middle East, & Asia, 16 = Africa, Middle East, Asia & Oceania, 17 = Asia & Oceania, 18 = Africa & Middle East, 19 = Europe, Africa, Middle East, Asia & Oceania"
           - name: initiator
-            description: ""
+            description: "whether the state initiated the war: 1 = Yes, 2 = No"
           - name: outcome
-            description: ""
+            description: "coded as: 1 = Winner, 2 = Loser, 3 = Compromise/Tied, 4 = The war was transformed into another type of war, 5 = The war is ongoing as of 12/31/2007, 6 = Stalemate, 7 = Conflict continues at below war level, 8 = changed sides"
           - name: transto
-            description: ""
+            description: "the WarNum of the war that this war transformed into, -8=Not applicable"
           - name: batdeath
-            description: ""
+            description: "the battle-related combatant fatalities suffered by the state: -9= data unknown"
           - name: version
-            description: ""
+            description: "Version of the data = 4.0"
 
       - name: intrastatewar_v51
-        description: ""
+        description: "The Correlates of War (COW) Project has utilized a classification of wars that is based upon the status of territorial entities, in particular focusing on those that are classified as members of the inter-state system (referred to as “states”).3 Wars have been categorized by whether they primarily take place between/among states, between/among a state(s) and a non-state entity, and within states. This dataset encompasses wars in this last category – wars that predominantly take place within the recognized territory of a state, or intra-state war... Within the COW war typology, an intra-state war must meet same definitional requirements of all wars in that the war must involve sustained combat, involving organized armed forces, resulting in a minimum of 1,000 battle-related combatant fatalities within a twelve-month period. When Correlates of War scholars Melvin Small and J. David Singer first extended their study of war to include intra-state wars in Resort to Arms, they established an additional requisite condition that for a conflict to be a war, it must involve armed forces capable of “effective resistance” on both sides. They then developed two alternative criteria for defining effective resistance: “(a) both sides had to be initially organized for violent conflict and prepared to resist the attacks of their antagonists, or (b) the weaker side, although initially unprepared, is able to inflict upon the stronger opponents at least five percent of the number of fatalities it sustains.”4 These effective resistance criteria were specifically utilized to differentiate wars from massacres, one-sided state killings, or general riots by unorganized individuals. Such one-sided violence is not considered to be the same phenomenon as war and is not included here.... Overall, there is one record for a war. The number assigned to the war (WarNum) may have a value that contains decimal value (e.g. 502.1). The decimal values were used as a means to enter the large number of new wars while maintaining the numbering of previous versions of the data. It in no way implies that these wars are subsidiary wars. The war’s primary participants are listed as having fought on Side A or Side B of the war. The letters A and B have no particular meaning, though in civil wars the state government is listed as Side A."
         columns:
           - name: warnum
-            description: ""
+            description: "the number assigned to the war (may have decimal value)"
           - name: warname
-            description: ""
+            description: "the name given to the war"
           - name: v5regionnum
-            description: ""
+            description: "the geographical region where combat occurred. The values here are a variation of those used in the state system dataset. Values are: 1= North America; 2=South America; 3=Europe; 4=Sub-Saharan Africa; 5=Middle East and North Africa; 6=Asia and Oceania."
           - name: wartype
-            description: ""
+            description: "4 = Civil war for central control; 5 = Civil war over local issues; 6 = Regional internal; 7 = Intercommunal"
           - name: ccodea
-            description: ""
+            description: "the Country Code or System Membership number for the primary participant on Side A of the war; -8 = Not Applicable (the participant is not a state)"
           - name: sidea
-            description: ""
+            description: "the historical name of the primary participant on Side A of the war"
           - name: sideb
-            description: ""
+            description: "the historical name(s) of the primary participant(s) fighting on Side B"
           - name: intnl
-            description: ""
+            description: is the war internationalized? 0=No; 1=Yes"
           - name: startmo1
-            description: ""
+            description: "the month in which sustained combat began: -9 = month unknown"
           - name: startdy1
-            description: ""
+            description: "the day on which sustained combat began: -9 = day unknown"
           - name: startyr1
-            description: ""
+            description: "the year in which sustained combat began: -9 = year is unknown"
           - name: endmo1
-            description: ""
+            description: "the month in which sustained combat ended; or the month of the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as of 12/31/2014; -9 = month unknown"
           - name: enddy1
-            description: ""
+            description: "the day on which sustained combat ended; or the day after the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2014; -9 = day unknown"
           - name: endyr1
-            description: ""
+            description: "the year in which sustained combat ended; or the year of the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2014; -9 = year unknown"
           - name: startmo2
-            description: ""
+            description: "after a break in the fighting, the month in which sustained combat resumed: - 8 = not applicable; -9 = month unknown"
           - name: startdy2
-            description: ""
+            description: "after a break in the fighting, the day on which sustained combat resumed: -8 = not applicable; -9 = month unknown"
           - name: startyr2
-            description: ""
+            description: "after a break in the fighting, the year in which sustained combat resumed: -8 = not applicable; -9 = month unknown"
           - name: endmo2
-            description: ""
+            description: "after fighting resumed, the month in which sustained combat ended, or the month of the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2014; -8 = not applicable; - 9 = month unknown"
           - name: enddy2
-            description: ""
+            description: "after fighting resumed, the day on which sustained combat ended; or the day after the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2014; -8 = not applicable; -9 = month unknown"
           - name: endyr2
-            description: ""
+            description: "after fighting resumed, the year in which sustained combat ended; or the year of the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2014; -9 = year unknown"
           - name: startmo3
-            description: ""
+            description: "after a break in the fighting, the month in which sustained combat resumed: - 8 = not applicable; -9 = month unknown"
           - name: startdy3
-            description: ""
+            description: "after a break in the fighting, the day on which sustained combat resumed: -8 = not applicable; -9 = month unknown"
           - name: startyr3
-            description: ""
+            description: "after a break in the fighting, the year in which sustained combat resumed: -8 = not applicable; -9 = month unknown"
           - name: endmo3
-            description: ""
+            description: "after fighting resumed, the month in which sustained combat ended; or the month of the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2014; -8 = not applicable; - 9 = month unknown"
           - name: enddy3
-            description: ""
+            description: "after fighting resumed, the day on which sustained combat ended; or the day after the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2014; -8 = not applicable; -9 = month unknown"
           - name: endyr3
-            description: ""
+            description: "after fighting resumed, the year in which sustained combat ended, or the year of the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2014; -9 = year unknown"
           - name: startmo4
-            description: ""
+            description: "after a break in the fighting, the month in which sustained combat resumed: - 8 = not applicable; -9 = month unknown"
           - name: startdy4
-            description: ""
+            description: "after a break in the fighting, the day on which sustained combat resumed: -8 = not applicable; -9 = month unknown"
           - name: startyr4
-            description: ""
+            description: "after a break in the fighting, the year in which sustained combat resumed: -8 = not applicable; -9 = month unknown"
           - name: endmo4
-            description: ""
+            description: "after fighting resumed, the month in which sustained combat ended, or the month of the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2014; -8 = not applicable; - 9 = month unknown"
           - name: enddy4
-            description: ""
+            description: "after fighting resumed, the day on which sustained combat ended, or the day after the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2014; -8 = not applicable; -9 = month unknown"
           - name: endyr4
-            description: ""
+            description: "after fighting resumed, the year in which sustained combat ended; or the year of the last major engagement after which fatalities declined below the war fatality threshold: -7 = war ongoing as if 12/31/2014; -9 = year unknown"
           - name: wduratdays
-            description: ""
+            description: "The number of days the war lasted"
           - name: wduratmo
-            description: ""
+            description: "The number of months the war lasted"
           - name: totnatmonwar
-            description: ""
+            description: "The total number of months of war experienced by all the state participants in the war"
           - name: transfrom
-            description: ""
+            description: "the WarNum of a preceding war that was transformed into this intra-state war: -8 = Not applicable"
           - name: initiator
-            description: ""
+            description: "the name of the participant that began the war"
           - name: outcome
-            description: ""
+            description: "1 = Side A wins; 2 = Side B wins; 3 = Compromise; 4 = The war was transformed into another type of war; 5 = The war is ongoing as of 12/31/2014; 6 = Stalemate; 7 = Conflict continues at below war level"
           - name: transto
-            description: ""
+            description: "the WarNum of the war that this war transformed into: -8 = Not applicable"
           - name: deathssidea
-            description: ""
+            description: "the battle-related combatant fatalities suffered by the Side A participant(s): - 8 = not applicable (death figures are reported only once – not versus each individual opponent); -9= data unknown"
           - name: deathssideb
-            description: ""
+            description: "the battle-related combatant fatalities suffered by the Side B participant(s): -8 = not applicable (death figures are reported only once – not versus each individual opponent); -9= data unknown"
           - name: totalbdeaths
-            description: ""
+            description: "the total battle-related combatant fatalities suffered by both SideA and SideB participant(s): - 8 = not applicable, -9= data unknown"
           - name: version
-            description: ""
+            description: "Version of the data = 5.1"
 
       - name: nonstatewar_v40
-        description: ""
+        description: "Previously, the Correlates of War (COW) Project has examined only wars that involved the government of a member of the interstate system (a state) in one form or another. The inclusion of non-state wars in the data presented here represents an attempt to broaden our understanding of war by including wars between or among non-state entities. Such entities include governments of other types of geopolitical units (GPUs), such as dependencies or non-state autonomous entities, that do not meet the criteria of system membership. They also might involve nonterritorial entities (NTEs) or non-state armed groups (NSAs) that have no defined territorial base. From a state-centric theoretical perspective, wars between or among non-state actors fall into four general categories... Two of these types take place within existing system members--regional internal wars (war type 6) and inter-communal wars (war type 7)--and thus are included along with civil wars in the broader category of intra-state wars. The remaining two classifications, wars between or among non-state entities that take place in non-state territory (war type 8, of which we have sixty-one) and wars between NSAs that take place across state borders (war type 9, of which we have identified one), are included in the Non-State War dataset presented here... Since non-state armed groups are generally smaller than states and have fewer resources than states, we have adopted a more minimalist requirement for an NSA to be considered a war participant. An NSA can be considered a war participant if it either commits 100 armed personnel to the war or suffers 25 battle-related deaths. Thus non-state wars involve combat between two or more non-state armed groups that are organized for combat, are capable of effective resistance, and commit a minimum of 100 troops to the war or suffer 25 battle-related deaths. Admittedly, this lower level to qualify as a war participant may make it more complicated to identify all of the participants in a non-state war. The participants are grouped as to whether they fought on Side A or Side B of the war (the letters A and B having no particular meaning)."
         columns:
           - name: warnum
-            description: ""
+            description: "the number assigned to the war"
           - name: warname
-            description: ""
+            description: "the name given to the war"
           - name: wartype
-            description: ""
+            description: "8 = wars between or among non-state entities that take place in non-state territory: 9 = wars between NSAs that take place across state borders"
           - name: wherefought
-            description: ""
+            description: "Region where combat occurred. Values are: 1 = W. Hemisphere, 2 = Europe, 4 = Africa, 6 = Middle East, 7 = Asia, 9 = Oceania"
           - name: sidea1
-            description: ""
+            description: "the first Non-State Armed group (NSA) fighting on one side (Side A) of the war"
           - name: sidea2
-            description: ""
+            description: "the second Non-State Armed group (NSA) fighting on one side (Side A) of the war: -8=Not Applicable (no second party on this side)"
           - name: sideb1
-            description: ""
+            description: "the first Non-State Armed group (NSA) fighting on the other side of the war (Side B)"
           - name: sideb2
-            description: ""
+            description: "the second Non-State Armed group (NSA) fighting on the other side of the war (Side B): -8=Not Applicable (no second party on this side)"
           - name: sideb3
-            description: ""
+            description: "the third Non-State Armed group (NSA) fighting on the other side of the war (Side B): -8=Not Applicable (no third party on this side)"
           - name: sideb4
-            description: ""
+            description: "the fourth Non-State Armed group (NSA) fighting on the other side of the war (Side B): -8=Not Applicable (no fourth party on this side)"
           - name: sideb5
-            description: ""
+            description: "the fifth Non-State Armed group (NSA) fighting on the other side of the war (Side B): -8=Not Applicable (no fifth party on this side)"
           - name: startyear
-            description: ""
+            description: "the year in which sustained combat began"
           - name: startmonth
-            description: ""
+            description: "the month in which sustained combat began: -9 is used when a specific month is as yet unknown"
           - name: startday
-            description: ""
+            description: "the day on which sustained combat began: -9 is used when a specific day is as yet unknown"
           - name: endyear
-            description: ""
+            description: "the year in which sustained combat ended, or the year of the last major engagement after which fatalities declined below the war fatality threshold"
           - name: endmonth
-            description: ""
+            description: "the month in which sustained combat ended, or the month of the last major engagement after which fatalities declined below the war fatality threshold: -9 is used when a specific month is as yet unknown"
           - name: endday
-            description: ""
+            description: "the day on which sustained combat ended, or the day after the last major engagement after which fatalities declined below the war fatality threshold: -9 is used when a specific day is as yet unknown"
           - name: initiator
-            description: ""
+            description: "the side, which began combat: A or B"
           - name: transfrom
-            description: ""
+            description: "the WarNum of a preceding war which was transformed into this war, -8=Not applicable"
           - name: transto
-            description: ""
+            description: "the WarNum of the war that this war transformed into, -8=Not applicable"
           - name: outcome
-            description: ""
+            description: "coded as: 1 - Side A wins, 2 - Side B wins, 3 - Compromise, 4 - The war was transformed into another type of war, 5 - The war is ongoing as of 12/31/2007, 6 - Stalemate, 7 - Conflict continues at below war level"
           - name: sideadeaths
-            description: ""
+            description: "the battle-related combatant fatalities suffered by Side A, -9= data unknown"
           - name: sidebdeaths
-            description: ""
+            description: "the battle-related combatant fatalities suffered by Side B, -9= data unknown"
           - name: totalcombatdeaths
-            description: ""
+            description: "the combination of Side A Deaths and Side B. Deaths. If the specific fatalities of the Sides are unknown, a total combatant fatality figure may be provided, -9= data unknown"
           - name: version
-            description: ""
+            description: "the version of the dataset = 4.0"
 
