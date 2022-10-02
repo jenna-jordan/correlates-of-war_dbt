@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: states2016
+    description: "This table contains a list of the COW states, numbers, abbreviations, and their qualifying periods of tenure in the state system. Users of the data set should note that states that leave and reenter the state system have more than one record in the data set."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - country_code
+            - start_date
+    columns:
+      - name: state_abbr
+        description: "COW state abbreviation"
+        tests:
+          - not_null
+
+      - name: country_code
+        description: "COW state number"
+        tests:
+          - not_null
+
+      - name: state_name
+        description: "Primary COW state name"
+        tests:
+          - not_null
+
+      - name: start_date
+        description: "Beginning date of state tenure"
+        tests:
+          - not_null
+
+      - name: end_date
+        description: "Ending date of state tenure"
+        tests:
+          - not_null

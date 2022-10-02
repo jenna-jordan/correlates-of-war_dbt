@@ -17,21 +17,21 @@ dfExtraStateWar = pd.read_csv(
 conn = duckdb.connect("cow.db", read_only=False)
 
 table_creates = """
-DROP SCHEMA IF EXISTS sources CASCADE;
-CREATE SCHEMA sources;
-CREATE TABLE sources.states2016 AS 
+DROP SCHEMA IF EXISTS original CASCADE;
+CREATE SCHEMA original;
+CREATE TABLE original.states2016 AS 
     SELECT * FROM read_csv_auto('./duckdb/data/states2016.csv', ALL_VARCHAR=TRUE);
-CREATE TABLE sources.system2016 AS 
+CREATE TABLE original.system2016 AS 
     SELECT * FROM read_csv_auto('./duckdb/data/system2016.csv', ALL_VARCHAR=TRUE);
-CREATE TABLE sources.majors2016 AS 
+CREATE TABLE original.majors2016 AS 
     SELECT * FROM read_csv_auto('./duckdb/data/majors2016.csv', ALL_VARCHAR=TRUE);
-CREATE TABLE sources.interstatewar_v40 AS 
+CREATE TABLE original.interstatewar_v40 AS 
     SELECT * FROM read_csv_auto('./duckdb/data/Inter-StateWarData_v4.0.csv', ALL_VARCHAR=TRUE);
-CREATE TABLE sources.nonstatewar_v40 AS 
+CREATE TABLE original.nonstatewar_v40 AS 
     SELECT * FROM read_csv_auto('./duckdb/data/Non-StateWarData_v4.0.csv', ALL_VARCHAR=TRUE);
-CREATE TABLE sources.intrastatewar_v51 AS 
+CREATE TABLE original.intrastatewar_v51 AS 
     SELECT * FROM dfIntraStateWar;
-CREATE TABLE sources.extrastatewar_v40 AS 
+CREATE TABLE original.extrastatewar_v40 AS 
     SELECT * FROM dfExtraStateWar;
 """
 

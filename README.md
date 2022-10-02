@@ -58,8 +58,8 @@ Copied CSV files into `duckdb/data/` and ran the script `duckdb/create_db.py`
 
 ### database schemas
 
-- `sources`: where all CSV files will be loaded
+- `original`: where all CSV files will be loaded
     - note: may end up using seeds instead
-- `staging`: where the cleaned up data will go before it has been substatially reorganized
+- `cleaned`: where the cleaned up data will go before it has been substantially reorganized
 - `normalized`: where the fully normalized data will live, with PK and FK tests/constraints
 - ?

@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: majors2016
+    description: "This table contains a list of the COW major powers and their qualifying periods of tenure. Users of the data set should note that major powers that leave and reenter the major power system have more than one record in the data set."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - country_code
+            - start_date
+    columns:
+      - name: state_abbr
+        description: "COW state abbreviation"
+        tests:
+          - not_null
+
+      - name: country_code
+        description: "COW state number"
+        tests:
+          - not_null
+
+      - name: start_date
+        description: "Beginning date of major power tenure"
+        tests:
+          - not_null
+
+      - name: end_date
+        description: "Ending date of major power tenure"
+        tests:
+          - not_null

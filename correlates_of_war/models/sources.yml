@@ -1,8 +1,9 @@
 version: 2
 
 sources:
-  - name: sources
-    description: "All CSV files are loaded into the sources schema, with all columns of type VARCHAR"
+  - name: original
+    schema: original
+    description: "All CSV files are loaded into the 'original' schema, with all columns of type VARCHAR"
     tables:
 
       - name: states2016

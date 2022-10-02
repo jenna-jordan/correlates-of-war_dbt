@@ -1,10 +1,10 @@
--- staging.system2016
+-- cleaned.system2016
 
 {{ config(MATERIALIZED = 'table') }}
 
 WITH source as (
 
-    select * from {{ source('sources','system2016') }}
+    select * from {{ source('original','system2016') }}
 
 ),
 

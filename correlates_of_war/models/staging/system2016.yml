@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: system2016
+    description: "This table contains a year-by-year list of state system membership (and so, is a base country-year data set). A state is listed as being a member of the state system if it is recorded in states2016 as present in the system at any time during the relevant year."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - country_code
+            - year
+    columns:
+      - name: state_abbr
+        description: "COW state abbreviation"
+        tests:
+          - not_null
+
+      - name: country_code
+        description: "COW state number"
+        tests:
+          - not_null
+
+      - name: year
+        description: "Observation year"
+        tests:
+          - not_null
