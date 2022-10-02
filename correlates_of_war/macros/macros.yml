@@ -1,0 +1,25 @@
+version: 2
+
+macros:
+  - name: resolve_date_columns
+    description: Takes the 3 seperate year, month, and day columns and resolves them into a date
+    docs:
+      show: true
+    arguments:
+      - name: year_col
+        description: the column name that contains the year
+      - name: month_col
+        description: the column name that contains the month
+      - name: day_col
+        description: the column name that contains the day
+  - name: resolve_date_precision
+    description: Takes the 3 seperate year, month, and day columns and determines the precision of the date
+    docs:
+      show: true
+    arguments:
+      - name: year_col
+        description: the column name that contains the year
+      - name: month_col
+        description: the column name that contains the month
+      - name: day_col
+        description: the column name that contains the day

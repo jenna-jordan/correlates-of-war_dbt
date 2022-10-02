@@ -10,8 +10,8 @@ WITH source as (
 
 renamed AS (
 		SELECT 
-            stateabb AS state_abbr,
-			ccode AS country_code,
+            trim(stateabb) AS state_abbr,
+			trim(ccode) AS country_code,
 			year::INTEGER as year
 		FROM source
 		)
